@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8fb;
+  --foreground: #0b1220;
+}
+
+@theme {
+  --color-background: #f7f8fb;
+  --color-foreground: #0b1220;
+
+  --color-ink-50: #f4f6fa;
+  --color-ink-100: #e7eaf3;
+  --color-ink-200: #c9d0e3;
+  --color-ink-300: #a2adc9;
+  --color-ink-400: #7280a3;
+  --color-ink-500: #4f5d80;
+  --color-ink-600: #384467;
+  --color-ink-700: #263153;
+  --color-ink-800: #161f3d;
+  --color-ink-900: #0e1530;
+  --color-ink-950: #070b1c;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7ff;
+  --color-brand-200: #b7cfff;
+  --color-brand-300: #89aeff;
+  --color-brand-400: #5686ff;
+  --color-brand-500: #2f62f5;
+  --color-brand-600: #2247d6;
+  --color-brand-700: #1c39ac;
+  --color-brand-800: #1a3089;
+  --color-brand-900: #192b6e;
+
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+
+  --color-rose-400: #fb7185;
+  --color-rose-500: #f43f5e;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-brand-200);
+  color: var(--color-ink-950);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .backdrop-blur-header {
+    backdrop-filter: blur(16px);
+  }
+}

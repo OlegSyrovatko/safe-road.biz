@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "siteName": "Safe Road",
+    "home": {
+      "title": "Safe Road for Business — Fleet Navigation, Road Quality & Trip Analytics",
+      "description": "Safe Road helps carriers and fleet businesses get better driver navigation, road quality insight, and detailed trip analytics.",
+      "ogAlt": "Safe Road — navigation and trip analytics app for business"
+    },
+    "order": {
+      "title": "Order Safe Road for Business",
+      "description": "Submit a request to connect Safe Road to your fleet. Choose a plan and leave your contact details.",
+      "ogAlt": "Order Safe Road for business"
+    }
+  },
+  "nav": {
+    "features": "Features",
+    "business": "For Business",
+    "analytics": "Analytics",
+    "pricing": "Pricing",
+    "order": "Order",
+    "skipToContent": "Skip to content"
+  },
+  "languageSwitcher": {
+    "uk": "UA",
+    "en": "EN",
+    "label": "Language selector"
+  },
+  "header": {
+    "logoLabel": "Safe Road — home page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "Safe Road for Business",
+    "title": "Safer trips.",
+    "titleHighlight": "Better fleet control.",
+    "subtitle": "Safe Road helps drivers plan routes, assess road quality, and get trip analytics — while giving businesses more control over how their vehicles are used.",
+    "ctaPrimary": "Order for business",
+    "ctaSecondary": "Learn more",
+    "imageAlt": "Safe Road mobile app showing navigation and a route",
+    "statLabel1": "Real-time navigation",
+    "statLabel2": "Road quality rating",
+    "statLabel3": "Trip analytics"
+  },
+  "valueProposition": {
+    "eyebrow": "Why Safe Road",
+    "title": "One app for drivers and business",
+    "items": [
+      {
+        "title": "Navigation & routes",
+        "description": "Route planning that accounts for the actual road the driver will take."
+      },
+      {
+        "title": "Road quality rating",
+        "description": "Insight into road surface condition along the trip route."
+      },
+      {
+        "title": "Trip analytics",
+        "description": "Structured data for every trip: route, time, speed, distance, and body vibration data that helps assess suspension condition and road surface quality."
+      },
+      {
+        "title": "Multiple devices",
+        "description": "Connect the app for every driver and scale together with your fleet."
+      }
+    ]
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "title": "Driving a car, you see the road. Running a fleet, you need data.",
+    "subtitle": "Fleet businesses face challenges that aren't visible from the driver's seat.",
+    "items": [
+      {
+        "title": "Not enough trip information",
+        "description": "Companies don't always know which routes their drivers actually take."
+      },
+      {
+        "title": "Road quality varies",
+        "description": "The same route can have sections in completely different condition."
+      },
+      {
+        "title": "Trips are hard to analyze",
+        "description": "Without structured statistics, it's hard to evaluate routes and trips."
+      },
+      {
+        "title": "A vehicle is a cost",
+        "description": "Poor roads, extra kilometers, inefficient routes, and aggressive driving accelerate vehicle wear and increase operating costs."
+      }
+    ]
+  },
+  "solution": {
+    "eyebrow": "The solution",
+    "title": "Safe Road turns trip data into useful information",
+    "subtitle": "The same route, now with navigation, road rating, and analytics — for the driver and for the business.",
+    "flowProblem": "Problem",
+    "flowProduct": "Safe Road",
+    "flowResult": "Result",
+    "items": [
+      { "problem": "Driver doesn't know road conditions ahead", "result": "Routes with road surface quality rating" },
+      { "problem": "Company can't see actual routes driven", "result": "Trip history with details for every route" },
+      { "problem": "No unified view across the fleet", "result": "Speed, time, and distance stats for every trip" },
+      { "problem": "Hard to evaluate trip efficiency", "result": "Structured analytics for informed decisions" },
+      { "problem": "Company can't see how drivers treat the vehicle", "result": "Body vibration and harsh-maneuver data for monitoring driving style" }
+    ]
+  },
+  "navigationFeature": {
+    "eyebrow": "Navigation",
+    "title": "Navigation that accounts for the real road",
+    "description": "Safe Road helps drivers plan a route and get additional road information during the trip — not just where to go, but what to expect along the way.",
+    "imageAlt": "Safe Road navigation screen with route and road information",
+    "cta": "View pricing",
+    "points": [
+      { "title": "Route planning", "description": "Building a route to the destination." },
+      { "title": "Speed", "description": "Current speed and limits on the road section." },
+      { "title": "Distance & time", "description": "Distance to destination and estimated travel time." },
+      { "title": "Road sections", "description": "Information about the condition of road sections on the route." },
+      { "title": "Easy navigation", "description": "A clear interface for use while driving." }
+    ]
+  },
+  "roadQuality": {
+    "eyebrow": "Road quality",
+    "title": "Know not just where to go, but what the road will be like",
+    "description": "Safe Road rates road surface condition based on the vehicle's body vibration while driving. Drivers prepare better for a trip, and businesses get insight into both routes and the technical condition of their fleet.",
+    "imageAlt": "Map with color-coded road surface quality segments",
+    "legendGood": "Good section",
+    "legendMedium": "Medium quality",
+    "legendBad": "Poor section",
+    "note": "The rating is based on data collected during trips.",
+    "vibrationNote": "The same vibration data is also an indirect signal about suspension condition: sudden spikes can mean a poor road, or worn suspension parts worth checking."
+  },
+  "analytics": {
+    "eyebrow": "Analytics",
+    "title": "The trip is over. The data remains.",
+    "description": "Safe Road helps turn everyday trips into structured data for analysis — route history, duration, speed, distance, and body vibration data that helps monitor driving style and suspension condition.",
+    "message": "Every trip becomes a record: route, time, speed, distance, plus average and maximum body vibration.",
+    "imageAlt": "Safe Road analytics screen with trip history and statistics",
+    "cta": "Connect Safe Road",
+    "stats": [
+      { "label": "Trip history", "description": "A list of every trip with route details." },
+      { "label": "Distance", "description": "Distance covered on each trip." },
+      { "label": "Duration", "description": "Time on the road for each route." },
+      { "label": "Speed", "description": "Speed data throughout the trip." },
+      { "label": "Body vibration", "description": "Average and maximum vibration per trip — for assessing suspension condition and road quality." }
+    ]
+  },
+  "businessBenefits": {
+    "eyebrow": "For business",
+    "title": "What does the business get?",
+    "items": [
+      { "title": "Control", "description": "More information about the company's trips, routes, and how vehicles are driven." },
+      { "title": "Analytics", "description": "Data you can use to analyze how vehicles are used." },
+      { "title": "Safety", "description": "More information for the driver on the road, and for the business — signals about aggressive driving that puts cargo, passengers, and the vehicle itself at risk." },
+      { "title": "Driving style", "description": "Body vibration and harsh-maneuver data help spot aggressive handling of company vehicles early." },
+      { "title": "Efficiency", "description": "Better understanding of routes and vehicle usage." },
+      { "title": "Scalability", "description": "Connect more devices as your business grows." }
+    ]
+  },
+  "useCases": {
+    "eyebrow": "Who it's for",
+    "title": "Safe Road for different types of business",
+    "subtitle": "The product is useful for any business where a vehicle is a working tool.",
+    "items": [
+      { "title": "Carriers", "description": "Route and road condition control for freight and passenger transport." },
+      { "title": "Logistics companies", "description": "Trip analytics for evaluating delivery routes." },
+      { "title": "Delivery services", "description": "Navigation and trip history for couriers and delivery drivers." },
+      { "title": "Service companies", "description": "Control over vehicle trips to clients and job sites." },
+      { "title": "Fleet businesses", "description": "A unified view of how all company vehicles are used." },
+      { "title": "Sole proprietors with multiple vehicles", "description": "Simple trip analytics without complex management systems." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "From setup to scale",
+    "steps": [
+      { "title": "Install Safe Road", "description": "Download the app on the driver's device." },
+      { "title": "Plan a route", "description": "Use Safe Road during trips." },
+      { "title": "Get the data", "description": "Review trip history and statistics." },
+      { "title": "Scale up", "description": "Connect more devices as your business grows." }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Choose a plan for your business",
+    "subtitle": "Transparent pricing based on the number of devices in your fleet.",
+    "perMonth": "/ month",
+    "devicesPrefix": "For",
+    "devicesSuffix": "devices",
+    "recommendedBadge": "Recommended",
+    "cta": "Order",
+    "freeTrial": {
+      "badge": "Free",
+      "title": "Up to 3 devices — free, starting today",
+      "description": "Download Safe Road and connect up to 3 devices — free, with no time limit. Try navigation, road quality rating, and trip analytics before choosing a plan for your business."
+    },
+    "plans": {
+      "free": {
+        "name": "Safe Road Free",
+        "tagline": "Try it for free",
+        "devices": "Up to 3 devices",
+        "description": "Full access to navigation, road quality rating, and trip analytics — free, with no time limit.",
+        "features": [
+          "Navigation for every driver",
+          "Road quality rating",
+          "Trip history",
+          "Trip analytics",
+          "Up to 3 devices, free"
+        ]
+      },
+      "basic": {
+        "name": "Safe Road Basic Monthly",
+        "tagline": "For a small fleet",
+        "devices": "4–10 devices",
+        "description": "A starting plan for small teams beginning with navigation and trip analytics.",
+        "features": [
+          "Navigation for every driver",
+          "Road quality rating",
+          "Trip history",
+          "Basic route analytics"
+        ]
+      },
+      "plus": {
+        "name": "Safe Road Plus Monthly",
+        "tagline": "For an active fleet",
+        "devices": "11–50 devices",
+        "description": "The optimal plan for mid-sized fleets that need full analytics.",
+        "features": [
+          "Everything in Basic",
+          "Advanced trip analytics",
+          "Driving style and body-load monitoring",
+          "Fleet-wide statistics",
+          "Priority support"
+        ]
+      },
+      "pro": {
+        "name": "Safe Road Pro Monthly",
+        "tagline": "For large fleets",
+        "devices": "50+ devices",
+        "description": "A solution for large companies and carriers with a large-scale fleet.",
+        "features": [
+          "Everything in Plus",
+          "Unlimited device connections",
+          "Dedicated account manager",
+          "Custom partnership terms"
+        ]
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Ready to bring Safe Road to your business?",
+    "subtitle": "Connect Safe Road for your drivers and get more insight into every trip, starting today.",
+    "ctaPrimary": "Order Safe Road for business",
+    "ctaSecondary": "View pricing"
+  },
+  "footer": {
+    "description": "Safe Road — navigation, road quality rating, and trip analytics for drivers and business.",
+    "navTitle": "Navigation",
+    "companyTitle": "Company",
+    "storesTitle": "Get the app",
+    "socialTitle": "Follow us",
+    "legalTitle": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "Safe Road © {year}. All rights reserved.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "order": {
+    "eyebrow": "Order",
+    "title": "Order Safe Road for Business",
+    "subtitle": "Leave your contact details — we'll reach out to help connect Safe Road to your fleet.",
+    "selectedPlanLabel": "Selected plan",
+    "noPlanTitle": "Choose a plan",
+    "noPlanDescription": "You haven't selected a plan yet. You can pick one on the pricing page, or continue without one — we'll help you decide.",
+    "viewPricing": "View pricing",
+    "changePlan": "Change plan",
+    "form": {
+      "companyName": "Company name",
+      "contactPerson": "Contact person",
+      "email": "Email",
+      "phone": "Phone",
+      "country": "Country",
+      "message": "Message",
+      "messagePlaceholder": "Tell us briefly about your fleet or ask a question",
+      "callMeBack": "Please call me back",
+      "submit": "Send request",
+      "submitting": "Sending...",
+      "requiredMark": "required field",
+      "nextStepsNote": "After you submit, we'll reach out to confirm the details and send an invoice to the email you provided."
+    },
+    "validation": {
+      "required": "This field is required",
+      "invalidEmail": "Enter a valid email address",
+      "invalidPhone": "Enter a valid phone number"
+    },
+    "success": {
+      "title": "Thank you! We've received your request.",
+      "description": "Our team will get in touch with you shortly to confirm the details and send an invoice to the email you provided.",
+      "backHome": "Back to home"
+    }
+  },
+  "legal": {
+    "backToHome": "Back to home",
+    "privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy Policy",
+      "updated": "Updated August 11, 2026",
+      "intro": "This page explains what data Safe Road receives through the safe-road.biz website, how we use it, and what rights you have. If you have any questions, contact details are at the bottom of the page.",
+      "sections": [
+        {
+          "heading": "Who we are",
+          "paragraphs": [
+            "This Privacy Policy applies to the safe-road.biz website — a presentation resource for Safe Road for Business. The site is operated by Individual Entrepreneur (FOP) Oleh Syrovatko (Ukrainian business registration / EDRPOU 3046902290, Nosivka, Chernihiv Oblast, Ukraine), Safe Road's developer. For privacy questions, contact sirovatkooleg@gmail.com or +380 93 594 19 84."
+          ]
+        },
+        {
+          "heading": "Scope of this Policy",
+          "paragraphs": [
+            "This document describes how we handle data from visitors to safe-road.biz and from business connection requests.",
+            "Data collected directly by the Safe Road mobile app during trips (location, accelerometer data, device identifier) is governed by a separate in-app Privacy Policy available inside the app itself. A short summary is provided below in \"Mobile app data\" so business customers can review what will be collected about their drivers."
+          ]
+        },
+        {
+          "heading": "What data we collect on the website",
+          "paragraphs": ["Through the request form on the \"Order\" page, we receive the data you provide yourself:"],
+          "list": [
+            "Company name",
+            "Contact person's name",
+            "Email",
+            "Phone",
+            "Country",
+            "Message (optional)",
+            "Selected plan"
+          ]
+        },
+        {
+          "heading": "Technical data and cookies",
+          "paragraphs": [
+            "The website does not currently use third-party analytics or advertising cookies, and does not collect visitor technical data beyond standard hosting-provider logs. If we add analytics or marketing tools in the future, we will update this Policy and request your consent where required."
+          ]
+        },
+        {
+          "heading": "How we use the data",
+          "paragraphs": ["Request data is used to:"],
+          "list": [
+            "contact you about connecting Safe Road to your business",
+            "prepare terms and a commercial offer based on the selected plan",
+            "answer any questions included in your message"
+          ]
+        },
+        {
+          "heading": "Legal basis for processing",
+          "paragraphs": [
+            "We process request data based on the consent you give when submitting the form, and on our legitimate interest in handling a business inquiry."
+          ]
+        },
+        {
+          "heading": "Who we share data with",
+          "paragraphs": [
+            "We do not sell request data or share it with third parties for marketing purposes.",
+            "Data may be processed by services that support handling requests and customer communication — for example, an email service or a CRM system. We require such providers to maintain an appropriate level of data protection."
+          ]
+        },
+        {
+          "heading": "How long we keep data",
+          "paragraphs": [
+            "Request data is kept for as long as necessary to review your request and continue communicating with you, or until you ask us to delete it."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "paragraphs": ["You have the right to:"],
+          "list": [
+            "find out what data we hold about you",
+            "request correction of inaccurate data",
+            "request deletion of your data",
+            "withdraw consent to processing at any time"
+          ],
+          "note": "To exercise these rights, email sirovatkooleg@gmail.com."
+        },
+        {
+          "heading": "Safe Road mobile app data",
+          "paragraphs": [
+            "This section is for business customers who need to understand what data the Safe Road app collects about drivers once devices are connected.",
+            "The app does not require user registration. A unique device identifier is created on first launch. The app collects:"
+          ],
+          "list": [
+            "location data",
+            "accelerometer data (body vibration)",
+            "device identifier",
+            "general road surface condition data"
+          ],
+          "note": "Data is transmitted over HTTPS and stored on a secure server. We do not share it with third parties, except where required by law or necessary for map service functionality. The full in-app Privacy Policy is available directly inside Safe Road."
+        },
+        {
+          "heading": "Security",
+          "paragraphs": [
+            "We take reasonable technical and organizational measures to protect data, including encrypted transmission (HTTPS). However, no method of transmission over the internet is completely secure."
+          ]
+        },
+        {
+          "heading": "Children",
+          "paragraphs": [
+            "The website and Safe Road for Business service are aimed at companies, sole proprietors, and their representatives. We do not knowingly collect data from children."
+          ]
+        },
+        {
+          "heading": "Changes to this Policy",
+          "paragraphs": [
+            "We may update this Policy. The last-updated date is shown at the top of the page. By continuing to use the site after changes, you agree to the updated version."
+          ]
+        },
+        {
+          "heading": "Contact",
+          "paragraphs": [
+            "For questions about this Policy, email sirovatkooleg@gmail.com or call +380 93 594 19 84."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of Use",
+      "updated": "Updated August 11, 2026",
+      "intro": "These Terms govern the use of the safe-road.biz website and the process of submitting a request to connect Safe Road for Business.",
+      "sections": [
+        {
+          "heading": "Acceptance of terms",
+          "paragraphs": [
+            "By using safe-road.biz, you agree to these Terms of Use. If you do not agree with any part of them, please do not use the website."
+          ]
+        },
+        {
+          "heading": "About the service",
+          "paragraphs": [
+            "safe-road.biz is a presentation resource for the Safe Road for Business app. It lets you learn about the product's capabilities and pricing, and submit a connection request, including the free option for up to 3 devices.",
+            "These Terms cover the use of the website and the request process. Use of the Safe Road mobile app itself is governed by the App Store and Google Play terms, and by a separate in-app Privacy Policy."
+          ]
+        },
+        {
+          "heading": "Connection requests",
+          "paragraphs": [
+            "Submitting the form on the \"Order\" page leaves a request for a consultation and connection of Safe Road for your business. This is NOT an automatic paid subscription: specific terms, invoices, and the agreement are negotiated separately with our team before paid service begins."
+          ]
+        },
+        {
+          "heading": "Free plan",
+          "paragraphs": [
+            "We offer the ability to connect up to 3 devices for free, with no time limit, to collect analytics and try Safe Road's functionality. We may change or discontinue this offer in the future, with notice posted on the website."
+          ]
+        },
+        {
+          "heading": "Acceptable use",
+          "paragraphs": ["By using the website, you agree not to:"],
+          "list": [
+            "violate applicable law",
+            "attempt unauthorized access to the website or related systems",
+            "use automated scraping without our permission",
+            "submit the request form with knowingly false information"
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "paragraphs": [
+            "The website's design, text, logo, and other materials belong to Individual Entrepreneur (FOP) Oleh Syrovatko (EDRPOU 3046902290) and are protected by copyright law. Using these materials without permission is prohibited."
+          ]
+        },
+        {
+          "heading": "Accuracy of information",
+          "paragraphs": [
+            "We aim to keep information about Safe Road's features and pricing up to date, but do not guarantee it is completely error-free. Final terms for a specific customer are set out in an individual agreement with our team."
+          ]
+        },
+        {
+          "heading": "Limitation of liability",
+          "paragraphs": [
+            "The website and the Safe Road app provide information about routes, road quality, and analytics based on data collected in real time, and do not guarantee its complete accuracy or timeliness.",
+            "To the maximum extent permitted by law, we are not liable for any damages related to use of the website or decisions made based on the information provided."
+          ]
+        },
+        {
+          "heading": "Third-party links",
+          "paragraphs": [
+            "The website contains links to the App Store, Google Play, and social media. We do not control the content or policies of these third-party resources and are not responsible for them."
+          ]
+        },
+        {
+          "heading": "Changes to these Terms",
+          "paragraphs": [
+            "We may update these Terms. The last-updated date is shown at the top of the page. By continuing to use the site after changes, you agree to the updated version."
+          ]
+        },
+        {
+          "heading": "Governing law",
+          "paragraphs": ["These Terms are governed by the laws of Ukraine."]
+        },
+        {
+          "heading": "Contact",
+          "paragraphs": [
+            "For questions about these Terms, email sirovatkooleg@gmail.com or call +380 93 594 19 84."
+          ]
+        }
+      ]
+    }
+  },
+  "common": {
+    "back": "Back"
+  }
+}
