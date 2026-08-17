@@ -5,6 +5,7 @@ import { SolutionSection } from "@/components/sections/SolutionSection";
 import { NavigationSection } from "@/components/sections/NavigationSection";
 import { RoadQualitySection } from "@/components/sections/RoadQualitySection";
 import { AnalyticsSection } from "@/components/sections/AnalyticsSection";
+import { LocationAlertsSection } from "@/components/sections/LocationAlertsSection";
 import { BusinessBenefits } from "@/components/sections/BusinessBenefits";
 import { UseCases } from "@/components/sections/UseCases";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -78,6 +79,7 @@ export default async function HomePage({
       <NavigationSection />
       <RoadQualitySection />
       <AnalyticsSection />
+      <LocationAlertsSection />
       <BusinessBenefits />
       <UseCases />
       <HowItWorks />

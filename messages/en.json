@@ -142,6 +142,19 @@
       { "label": "Body vibration", "description": "Average and maximum vibration per trip — for assessing suspension condition and road quality." }
     ]
   },
+  "locationAlerts": {
+    "eyebrow": "Location alerts",
+    "title": "Know where the car is before you even call the driver",
+    "description": "Drop a point on the map and Safe Road will message you in Telegram the moment a vehicle gets within 100 m, 1 km, or 5 km of it — or moves away from it. Works for any driver's device, no phone calls needed.",
+    "imageAlt": "Choosing a geofence radius on the map in the Safe Road app",
+    "cta": "See pricing",
+    "points": [
+      { "title": "Flexible radius", "description": "100 m, 1 km, or 5 km — choose exactly how close counts as close enough." },
+      { "title": "Instant Telegram alerts", "description": "Notifications land straight in Telegram — no calls to the driver, no back-and-forth." },
+      { "title": "Any device", "description": "Set up a separate geofence rule for every vehicle in the fleet." },
+      { "title": "3 devices free", "description": "Try it free on up to 3 devices, or connect 4 or more on a paid plan." }
+    ]
+  },
   "businessBenefits": {
     "eyebrow": "For business",
     "title": "What does the business get?",
@@ -202,6 +215,7 @@
           "Road quality rating",
           "Trip history",
           "Trip analytics",
+          "Telegram alerts when a vehicle approaches a point (100 m / 1 km / 5 km)",
           "Up to 3 devices, free"
         ]
       },
@@ -214,7 +228,9 @@
           "Navigation for every driver",
           "Road quality rating",
           "Trip history",
-          "Basic route analytics"
+          "Basic route analytics",
+          "Telegram alerts on vehicle location (100 m / 1 km / 5 km)",
+          "Rules can run for up to 30 days"
         ]
       },
       "plus": {
