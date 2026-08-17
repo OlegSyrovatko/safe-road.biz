@@ -1,6 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
+import { useCurrency } from "@/lib/currency/CurrencyProvider";
+import { convertUsdToUah, formatCurrency } from "@/lib/currency/format";
 import { cn } from "@/lib/utils";
 import type { PricingPlan } from "@/data/pricing";
+import { useLocale } from "next-intl";
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -25,6 +30,12 @@ export function PricingCard({
   ctaLabel,
   recommendedLabel,
 }: PricingCardProps) {
+  const locale = useLocale();
+  const { displayCurrency, rate } = useCurrency();
+  const amount =
+    displayCurrency === "UAH" && rate ? convertUsdToUah(plan.priceUsd, rate.rate) : plan.priceUsd;
+  const priceLabel = formatCurrency(amount, displayCurrency, locale);
+
   return (
     <div
       className={cn(
@@ -54,7 +65,7 @@ export function PricingCard({
 
       <div className="mt-5 flex items-baseline gap-1.5">
         <span className={cn("font-display text-4xl font-bold", plan.recommended ? "text-white" : "text-ink-950")}>
-          {plan.price}
+          {priceLabel}
         </span>
         <span className={cn("text-sm", plan.recommended ? "text-ink-300" : "text-ink-400")}>
           {perMonthLabel}

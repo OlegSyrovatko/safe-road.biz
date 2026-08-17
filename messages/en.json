@@ -199,6 +199,12 @@
     "devicesSuffix": "devices",
     "recommendedBadge": "Recommended",
     "cta": "Order",
+    "currency": {
+      "label": "Pricing currency",
+      "rateNote": "NBU rate on {date}: 1 $ = {rate} ₴",
+      "rateLoading": "Fetching the NBU rate…",
+      "rateUnavailable": "Rate temporarily unavailable, showing USD"
+    },
     "freeTrial": {
       "badge": "Free",
       "title": "Up to 3 devices — free, starting today",

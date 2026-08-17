@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { OrderForm } from "@/components/order/OrderForm";
+import { SelectedPlanSummary } from "@/components/order/SelectedPlanSummary";
 import { pricingPlans, isPlanId } from "@/data/pricing";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -76,9 +77,11 @@ export default async function OrderPage({
                 <p className="mt-1 font-display text-lg font-semibold text-ink-950">
                   {tPricing(`plans.${selectedPlan.id}.name`)}
                 </p>
-                <p className="mt-0.5 text-sm text-ink-500">
-                  {selectedPlan.price} {tPricing("perMonth")} · {tPricing(`plans.${selectedPlan.id}.devices`)}
-                </p>
+                <SelectedPlanSummary
+                  plan={selectedPlan}
+                  perMonthLabel={tPricing("perMonth")}
+                  devicesLabel={tPricing(`plans.${selectedPlan.id}.devices`)}
+                />
               </div>
               <Button href="/#pricing" variant="secondary" size="md">
                 {t("changePlan")}

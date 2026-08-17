@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { PricingCard } from "@/components/pricing/PricingCard";
 import { FreeTrialBanner } from "@/components/pricing/FreeTrialBanner";
+import { CurrencyToggle } from "@/components/pricing/CurrencyToggle";
 import { paidPlans } from "@/data/pricing";
 import { useTranslations } from "next-intl";
 
@@ -15,7 +16,11 @@ export function PricingSection() {
       <Container>
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="mt-16">
+        <div className="mt-8 flex justify-center">
+          <CurrencyToggle />
+        </div>
+
+        <div className="mt-10">
           <FreeTrialBanner
             badge={t("freeTrial.badge")}
             title={t("freeTrial.title")}

@@ -1,7 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { pricingPlans } from "@/data/pricing";
 import { submitBusinessOrder } from "@/lib/api/business";
+import { useCurrency } from "@/lib/currency/CurrencyProvider";
+import { convertUsdToUah } from "@/lib/currency/format";
 import { cn } from "@/lib/utils";
 import type { PlanId } from "@/types/order";
 import { AnimatePresence, motion } from "motion/react";
@@ -35,6 +38,7 @@ type FieldErrors = Partial<Record<keyof FormState, string>>;
 
 export function OrderForm({ planId }: { planId?: PlanId }) {
   const t = useTranslations("order");
+  const { displayCurrency, rate } = useCurrency();
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
@@ -81,8 +85,21 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
 
     setStatus("submitting");
 
+    const selectedPlan = pricingPlans.find((plan) => plan.id === planId);
+    const amount =
+      selectedPlan && displayCurrency === "UAH" && rate
+        ? convertUsdToUah(selectedPlan.priceUsd, rate.rate)
+        : selectedPlan?.priceUsd;
+
     try {
-      await submitBusinessOrder({ ...values, plan: planId });
+      await submitBusinessOrder({
+        ...values,
+        plan: planId,
+        currency: displayCurrency,
+        amount,
+        fxRate: displayCurrency === "UAH" ? rate?.rate : undefined,
+        fxRateDate: displayCurrency === "UAH" ? rate?.date : undefined,
+      });
       setStatus("success");
     } catch {
       setStatus("idle");
