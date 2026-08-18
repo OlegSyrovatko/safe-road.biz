@@ -15,6 +15,10 @@
 
 # next.js
 /.next/
+
+# deploy artifacts
+/.deploy/
+.deploy.tar.gz
 /out/
 
 # production
