@@ -5,6 +5,8 @@ import { pricingPlans } from "@/data/pricing";
 import { submitBusinessOrder } from "@/lib/api/business";
 import { useCurrency } from "@/lib/currency/CurrencyProvider";
 import { convertUsdToUah } from "@/lib/currency/format";
+import { useBillingCycle } from "@/lib/pricing/BillingCycleProvider";
+import { amountUsdForCycle } from "@/lib/pricing/billingCycle";
 import { cn } from "@/lib/utils";
 import type { PlanId } from "@/types/order";
 import { AnimatePresence, motion } from "motion/react";
@@ -39,6 +41,7 @@ type FieldErrors = Partial<Record<keyof FormState, string>>;
 export function OrderForm({ planId }: { planId?: PlanId }) {
   const t = useTranslations("order");
   const { displayCurrency, rate } = useCurrency();
+  const { billingCycle } = useBillingCycle();
   const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
@@ -86,15 +89,17 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
     setStatus("submitting");
 
     const selectedPlan = pricingPlans.find((plan) => plan.id === planId);
+    const amountUsd = selectedPlan ? amountUsdForCycle(selectedPlan.priceUsd, billingCycle) : undefined;
     const amount =
-      selectedPlan && displayCurrency === "UAH" && rate
-        ? convertUsdToUah(selectedPlan.priceUsd, rate.rate)
-        : selectedPlan?.priceUsd;
+      amountUsd !== undefined && displayCurrency === "UAH" && rate
+        ? convertUsdToUah(amountUsd, rate.rate)
+        : amountUsd;
 
     try {
       await submitBusinessOrder({
         ...values,
         plan: planId,
+        billingCycle,
         currency: displayCurrency,
         amount,
         fxRate: displayCurrency === "UAH" ? rate?.rate : undefined,

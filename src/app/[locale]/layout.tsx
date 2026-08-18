@@ -3,6 +3,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CurrencyProvider } from "@/lib/currency/CurrencyProvider";
+import { BillingCycleProvider } from "@/lib/pricing/BillingCycleProvider";
 import { Manrope, Inter } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -87,15 +88,17 @@ export default async function LocaleLayout({
       <body className="antialiased">
         <NextIntlClientProvider>
           <CurrencyProvider>
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
-            >
-              {t("skipToContent")}
-            </a>
-            <Header />
-            <main id="main-content">{children}</main>
-            <Footer />
+            <BillingCycleProvider>
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-ink-950 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+              >
+                {t("skipToContent")}
+              </a>
+              <Header />
+              <main id="main-content">{children}</main>
+              <Footer />
+            </BillingCycleProvider>
           </CurrencyProvider>
         </NextIntlClientProvider>
       </body>

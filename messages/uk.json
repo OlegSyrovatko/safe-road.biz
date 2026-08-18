@@ -195,6 +195,8 @@
     "title": "Оберіть тариф для свого бізнесу",
     "subtitle": "Прозорі тарифи залежно від кількості пристроїв у вашому автопарку.",
     "perMonth": "/ місяць",
+    "perYear": "/ рік",
+    "annualFullPrice": "замість {price}",
     "devicesPrefix": "Для",
     "devicesSuffix": "пристроїв",
     "recommendedBadge": "Рекомендовано",
@@ -204,6 +206,12 @@
       "rateNote": "Курс НБУ на {date}: 1 $ = {rate} ₴",
       "rateLoading": "Отримуємо курс НБУ…",
       "rateUnavailable": "Курс тимчасово недоступний, показуємо в доларах"
+    },
+    "billingCycle": {
+      "label": "Періодичність оплати",
+      "monthly": "Щомісяця",
+      "annual": "Щорічно",
+      "annualBadge": "-{months} міс."
     },
     "freeTrial": {
       "badge": "Безкоштовно",

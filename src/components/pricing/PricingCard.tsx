@@ -3,9 +3,11 @@
 import { Button } from "@/components/ui/Button";
 import { useCurrency } from "@/lib/currency/CurrencyProvider";
 import { convertUsdToUah, formatCurrency } from "@/lib/currency/format";
+import { useBillingCycle } from "@/lib/pricing/BillingCycleProvider";
+import { amountUsdForCycle, fullAnnualPriceUsd } from "@/lib/pricing/billingCycle";
 import { cn } from "@/lib/utils";
 import type { PricingPlan } from "@/data/pricing";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -15,6 +17,7 @@ interface PricingCardProps {
   description: string;
   features: string[];
   perMonthLabel: string;
+  perYearLabel: string;
   ctaLabel: string;
   recommendedLabel: string;
 }
@@ -27,14 +30,28 @@ export function PricingCard({
   description,
   features,
   perMonthLabel,
+  perYearLabel,
   ctaLabel,
   recommendedLabel,
 }: PricingCardProps) {
+  const t = useTranslations("pricing");
   const locale = useLocale();
   const { displayCurrency, rate } = useCurrency();
-  const amount =
-    displayCurrency === "UAH" && rate ? convertUsdToUah(plan.priceUsd, rate.rate) : plan.priceUsd;
-  const priceLabel = formatCurrency(amount, displayCurrency, locale);
+  const { billingCycle } = useBillingCycle();
+
+  function toDisplayAmount(amountUsd: number): number {
+    return displayCurrency === "UAH" && rate ? convertUsdToUah(amountUsd, rate.rate) : amountUsd;
+  }
+
+  const priceLabel = formatCurrency(
+    toDisplayAmount(amountUsdForCycle(plan.priceUsd, billingCycle)),
+    displayCurrency,
+    locale,
+  );
+  const fullPriceLabelValue =
+    billingCycle === "annual"
+      ? formatCurrency(toDisplayAmount(fullAnnualPriceUsd(plan.priceUsd)), displayCurrency, locale)
+      : null;
 
   return (
     <div
@@ -68,9 +85,14 @@ export function PricingCard({
           {priceLabel}
         </span>
         <span className={cn("text-sm", plan.recommended ? "text-ink-300" : "text-ink-400")}>
-          {perMonthLabel}
+          {billingCycle === "annual" ? perYearLabel : perMonthLabel}
         </span>
       </div>
+      {fullPriceLabelValue ? (
+        <p className="mt-1 text-sm text-ink-400 line-through">
+          {t("annualFullPrice", { price: fullPriceLabelValue })}
+        </p>
+      ) : null}
       <p className={cn("mt-1 text-sm font-medium", plan.recommended ? "text-teal-300" : "text-teal-600")}>
         {devices}
       </p>

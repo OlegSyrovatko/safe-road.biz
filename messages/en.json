@@ -195,6 +195,8 @@
     "title": "Choose a plan for your business",
     "subtitle": "Transparent pricing based on the number of devices in your fleet.",
     "perMonth": "/ month",
+    "perYear": "/ year",
+    "annualFullPrice": "instead of {price}",
     "devicesPrefix": "For",
     "devicesSuffix": "devices",
     "recommendedBadge": "Recommended",
@@ -204,6 +206,12 @@
       "rateNote": "NBU rate on {date}: 1 $ = {rate} ₴",
       "rateLoading": "Fetching the NBU rate…",
       "rateUnavailable": "Rate temporarily unavailable, showing USD"
+    },
+    "billingCycle": {
+      "label": "Billing cycle",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "annualBadge": "-{months} mo"
     },
     "freeTrial": {
       "badge": "Free",

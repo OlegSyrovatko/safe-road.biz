@@ -4,6 +4,7 @@ import { StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { PricingCard } from "@/components/pricing/PricingCard";
 import { FreeTrialBanner } from "@/components/pricing/FreeTrialBanner";
 import { CurrencyToggle } from "@/components/pricing/CurrencyToggle";
+import { BillingCycleToggle } from "@/components/pricing/BillingCycleToggle";
 import { paidPlans } from "@/data/pricing";
 import { useTranslations } from "next-intl";
 
@@ -16,7 +17,8 @@ export function PricingSection() {
       <Container>
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <BillingCycleToggle />
           <CurrencyToggle />
         </div>
 
@@ -41,6 +43,7 @@ export function PricingSection() {
                 description={t(`plans.${plan.id}.description`)}
                 features={t.raw(`plans.${plan.id}.features`) as string[]}
                 perMonthLabel={t("perMonth")}
+                perYearLabel={t("perYear")}
                 ctaLabel={t("cta")}
                 recommendedLabel={t("recommendedBadge")}
               />

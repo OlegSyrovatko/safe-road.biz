@@ -80,6 +80,7 @@ export default async function OrderPage({
                 <SelectedPlanSummary
                   plan={selectedPlan}
                   perMonthLabel={tPricing("perMonth")}
+                  perYearLabel={tPricing("perYear")}
                   devicesLabel={tPricing(`plans.${selectedPlan.id}.devices`)}
                 />
               </div>
