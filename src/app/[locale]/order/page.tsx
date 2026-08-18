@@ -101,9 +101,11 @@ export default async function OrderPage({
           )}
         </Reveal>
 
-        <Reveal delay={0.15} className="mt-10">
-          <OrderForm planId={selectedPlan?.id} />
-        </Reveal>
+        {selectedPlan ? (
+          <Reveal delay={0.15} className="mt-10">
+            <OrderForm planId={selectedPlan.id} />
+          </Reveal>
+        ) : null}
       </Container>
     </div>
   );

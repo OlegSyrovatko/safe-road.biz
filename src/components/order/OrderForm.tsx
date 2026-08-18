@@ -14,7 +14,6 @@ import { useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
 
 interface FormState {
-  plan: PlanId | "";
   companyName: string;
   contactPerson: string;
   email: string;
@@ -24,47 +23,47 @@ interface FormState {
   callMeBack: boolean;
 }
 
+const initialState: FormState = {
+  companyName: "",
+  contactPerson: "",
+  email: "",
+  phone: "",
+  country: "",
+  message: "",
+  callMeBack: false,
+};
+
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^[+0-9()\s-]{6,}$/;
 
 type FieldErrors = Partial<Record<keyof FormState, string>>;
 
-export function OrderForm({ planId }: { planId?: PlanId }) {
+// Only ever rendered once a plan is already chosen (see order/page.tsx) —
+// tier and billing cycle are picked together on the pricing section, where
+// the price is visible; a plan-only picker inside this form could silently
+// disagree with whatever billing cycle is currently selected elsewhere.
+export function OrderForm({ planId }: { planId: PlanId }) {
   const t = useTranslations("order");
-  const tPricing = useTranslations("pricing");
   const { displayCurrency, rate } = useCurrency();
   const { billingCycle } = useBillingCycle();
-  const [values, setValues] = useState<FormState>(() => ({
-    plan: planId ?? "",
-    companyName: "",
-    contactPerson: "",
-    email: "",
-    phone: "",
-    country: "",
-    message: "",
-    callMeBack: false,
-  }));
+  const [values, setValues] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [submitError, setSubmitError] = useState(false);
 
-  function updateField(field: keyof Omit<FormState, "callMeBack" | "plan">, value: string) {
+  function updateField(field: keyof Omit<FormState, "callMeBack">, value: string) {
     setValues((prev) => ({ ...prev, [field]: value }));
   }
 
   function validate(): FieldErrors {
     const nextErrors: FieldErrors = {};
-    const required: (keyof Omit<FormState, "callMeBack" | "plan">)[] = [
+    const required: (keyof Omit<FormState, "callMeBack">)[] = [
       "companyName",
       "contactPerson",
       "email",
       "phone",
       "country",
     ];
-
-    if (!values.plan) {
-      nextErrors.plan = t("validation.required");
-    }
 
     for (const field of required) {
       if (!values[field].trim()) {
@@ -95,7 +94,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
 
     setStatus("submitting");
 
-    const selectedPlan = paidPlans.find((plan) => plan.id === values.plan);
+    const selectedPlan = paidPlans.find((plan) => plan.id === planId);
     const amountUsd = selectedPlan ? amountUsdForCycle(selectedPlan.priceUsd, billingCycle) : undefined;
     const amount =
       amountUsd !== undefined && displayCurrency === "UAH" && rate
@@ -105,7 +104,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
     try {
       await submitBusinessOrder({
         ...values,
-        plan: values.plan || undefined,
+        plan: planId,
         billingCycle,
         currency: displayCurrency,
         amount,
@@ -143,7 +142,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
   }
 
   const fields: {
-    name: keyof Omit<FormState, "callMeBack" | "plan">;
+    name: keyof Omit<FormState, "callMeBack">;
     label: string;
     type?: string;
     span?: "full" | "half";
@@ -158,47 +157,6 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
   return (
     <form onSubmit={handleSubmit} noValidate className="rounded-2xl border border-ink-200 bg-white p-6 sm:p-8">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <div className="sm:col-span-2">
-          <label htmlFor="plan" className="block text-sm font-medium text-ink-700">
-            {t("form.plan")} <span className="text-rose-500">*</span>
-          </label>
-          <select
-            id="plan"
-            name="plan"
-            value={values.plan}
-            onChange={(event) => setValues((prev) => ({ ...prev, plan: event.target.value as PlanId }))}
-            aria-invalid={Boolean(errors.plan)}
-            aria-describedby={errors.plan ? "plan-error" : undefined}
-            className={cn(
-              "mt-1.5 w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-ink-950 outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-100",
-              errors.plan ? "border-rose-400" : "border-ink-200",
-            )}
-          >
-            <option value="" disabled>
-              {t("form.planPlaceholder")}
-            </option>
-            {paidPlans.map((plan) => (
-              <option key={plan.id} value={plan.id}>
-                {tPricing(`plans.${plan.id}.name`)}
-              </option>
-            ))}
-          </select>
-          <AnimatePresence>
-            {errors.plan ? (
-              <motion.p
-                id="plan-error"
-                initial={{ opacity: 0, y: -4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="mt-1.5 text-xs font-medium text-rose-500"
-                role="alert"
-              >
-                {errors.plan}
-              </motion.p>
-            ) : null}
-          </AnimatePresence>
-        </div>
-
         {fields.map((field) => (
           <div key={field.name} className={field.span === "full" ? "sm:col-span-2" : undefined}>
             <label htmlFor={field.name} className="block text-sm font-medium text-ink-700">

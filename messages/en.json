@@ -299,12 +299,10 @@
     "subtitle": "Leave your contact details — we'll reach out to help connect Safe Road to your fleet.",
     "selectedPlanLabel": "Selected plan",
     "noPlanTitle": "No plan selected yet",
-    "noPlanDescription": "Choose a plan in the form below or on the pricing page — the request can't be sent without one.",
+    "noPlanDescription": "Choose a plan and billing cycle on the pricing page first — the request form will appear here once you do.",
     "viewPricing": "View pricing",
     "changePlan": "Change plan",
     "form": {
-      "plan": "Plan",
-      "planPlaceholder": "Choose a plan",
       "companyName": "Company name",
       "contactPerson": "Contact person",
       "email": "Email",
