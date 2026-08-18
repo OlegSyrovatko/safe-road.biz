@@ -314,7 +314,7 @@
       "submit": "Send request",
       "submitting": "Sending...",
       "requiredMark": "required field",
-      "nextStepsNote": "After you submit, we'll reach out to confirm the details and send an invoice to the email you provided."
+      "nextStepsNote": "After you submit, we'll send an invoice for payment and account setup instructions to the email you provided."
     },
     "validation": {
       "required": "This field is required",
@@ -323,7 +323,7 @@
     },
     "success": {
       "title": "Thank you! We've received your request.",
-      "description": "Our team will get in touch with you shortly to confirm the details and send an invoice to the email you provided.",
+      "description": "We'll send an invoice for payment and account setup instructions to the email you provided.",
       "backHome": "Back to home"
     }
   },
