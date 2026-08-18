@@ -298,11 +298,13 @@
     "title": "Order Safe Road for Business",
     "subtitle": "Leave your contact details — we'll reach out to help connect Safe Road to your fleet.",
     "selectedPlanLabel": "Selected plan",
-    "noPlanTitle": "Choose a plan",
-    "noPlanDescription": "You haven't selected a plan yet. You can pick one on the pricing page, or continue without one — we'll help you decide.",
+    "noPlanTitle": "No plan selected yet",
+    "noPlanDescription": "Choose a plan in the form below or on the pricing page — the request can't be sent without one.",
     "viewPricing": "View pricing",
     "changePlan": "Change plan",
     "form": {
+      "plan": "Plan",
+      "planPlaceholder": "Choose a plan",
       "companyName": "Company name",
       "contactPerson": "Contact person",
       "email": "Email",
@@ -314,7 +316,8 @@
       "submit": "Send request",
       "submitting": "Sending...",
       "requiredMark": "required field",
-      "nextStepsNote": "After you submit, we'll send an invoice for payment and account setup instructions to the email you provided."
+      "nextStepsNote": "After you submit, we'll send an invoice for payment and account setup instructions to the email you provided.",
+      "submitError": "Couldn't send the request. Check your connection and try again."
     },
     "validation": {
       "required": "This field is required",

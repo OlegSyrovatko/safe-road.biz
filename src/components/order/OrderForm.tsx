@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { pricingPlans } from "@/data/pricing";
+import { paidPlans } from "@/data/pricing";
 import { submitBusinessOrder } from "@/lib/api/business";
 import { useCurrency } from "@/lib/currency/CurrencyProvider";
 import { convertUsdToUah } from "@/lib/currency/format";
@@ -14,6 +14,7 @@ import { useTranslations } from "next-intl";
 import { useState, type FormEvent } from "react";
 
 interface FormState {
+  plan: PlanId | "";
   companyName: string;
   contactPerson: string;
   email: string;
@@ -23,16 +24,6 @@ interface FormState {
   callMeBack: boolean;
 }
 
-const initialState: FormState = {
-  companyName: "",
-  contactPerson: "",
-  email: "",
-  phone: "",
-  country: "",
-  message: "",
-  callMeBack: false,
-};
-
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^[+0-9()\s-]{6,}$/;
 
@@ -40,25 +31,40 @@ type FieldErrors = Partial<Record<keyof FormState, string>>;
 
 export function OrderForm({ planId }: { planId?: PlanId }) {
   const t = useTranslations("order");
+  const tPricing = useTranslations("pricing");
   const { displayCurrency, rate } = useCurrency();
   const { billingCycle } = useBillingCycle();
-  const [values, setValues] = useState<FormState>(initialState);
+  const [values, setValues] = useState<FormState>(() => ({
+    plan: planId ?? "",
+    companyName: "",
+    contactPerson: "",
+    email: "",
+    phone: "",
+    country: "",
+    message: "",
+    callMeBack: false,
+  }));
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState(false);
 
-  function updateField(field: keyof Omit<FormState, "callMeBack">, value: string) {
+  function updateField(field: keyof Omit<FormState, "callMeBack" | "plan">, value: string) {
     setValues((prev) => ({ ...prev, [field]: value }));
   }
 
   function validate(): FieldErrors {
     const nextErrors: FieldErrors = {};
-    const required: (keyof Omit<FormState, "callMeBack">)[] = [
+    const required: (keyof Omit<FormState, "callMeBack" | "plan">)[] = [
       "companyName",
       "contactPerson",
       "email",
       "phone",
       "country",
     ];
+
+    if (!values.plan) {
+      nextErrors.plan = t("validation.required");
+    }
 
     for (const field of required) {
       if (!values[field].trim()) {
@@ -81,6 +87,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
     event.preventDefault();
     const nextErrors = validate();
     setErrors(nextErrors);
+    setSubmitError(false);
 
     if (Object.keys(nextErrors).length > 0) {
       return;
@@ -88,7 +95,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
 
     setStatus("submitting");
 
-    const selectedPlan = pricingPlans.find((plan) => plan.id === planId);
+    const selectedPlan = paidPlans.find((plan) => plan.id === values.plan);
     const amountUsd = selectedPlan ? amountUsdForCycle(selectedPlan.priceUsd, billingCycle) : undefined;
     const amount =
       amountUsd !== undefined && displayCurrency === "UAH" && rate
@@ -98,7 +105,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
     try {
       await submitBusinessOrder({
         ...values,
-        plan: planId,
+        plan: values.plan || undefined,
         billingCycle,
         currency: displayCurrency,
         amount,
@@ -108,6 +115,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
       setStatus("success");
     } catch {
       setStatus("idle");
+      setSubmitError(true);
     }
   }
 
@@ -135,7 +143,7 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
   }
 
   const fields: {
-    name: keyof Omit<FormState, "callMeBack">;
+    name: keyof Omit<FormState, "callMeBack" | "plan">;
     label: string;
     type?: string;
     span?: "full" | "half";
@@ -150,6 +158,47 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
   return (
     <form onSubmit={handleSubmit} noValidate className="rounded-2xl border border-ink-200 bg-white p-6 sm:p-8">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="sm:col-span-2">
+          <label htmlFor="plan" className="block text-sm font-medium text-ink-700">
+            {t("form.plan")} <span className="text-rose-500">*</span>
+          </label>
+          <select
+            id="plan"
+            name="plan"
+            value={values.plan}
+            onChange={(event) => setValues((prev) => ({ ...prev, plan: event.target.value as PlanId }))}
+            aria-invalid={Boolean(errors.plan)}
+            aria-describedby={errors.plan ? "plan-error" : undefined}
+            className={cn(
+              "mt-1.5 w-full rounded-xl border bg-white px-4 py-2.5 text-sm text-ink-950 outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-100",
+              errors.plan ? "border-rose-400" : "border-ink-200",
+            )}
+          >
+            <option value="" disabled>
+              {t("form.planPlaceholder")}
+            </option>
+            {paidPlans.map((plan) => (
+              <option key={plan.id} value={plan.id}>
+                {tPricing(`plans.${plan.id}.name`)}
+              </option>
+            ))}
+          </select>
+          <AnimatePresence>
+            {errors.plan ? (
+              <motion.p
+                id="plan-error"
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="mt-1.5 text-xs font-medium text-rose-500"
+                role="alert"
+              >
+                {errors.plan}
+              </motion.p>
+            ) : null}
+          </AnimatePresence>
+        </div>
+
         {fields.map((field) => (
           <div key={field.name} className={field.span === "full" ? "sm:col-span-2" : undefined}>
             <label htmlFor={field.name} className="block text-sm font-medium text-ink-700">
@@ -218,6 +267,20 @@ export function OrderForm({ planId }: { planId?: PlanId }) {
       </p>
 
       <p className="mt-3 text-xs leading-relaxed text-ink-400">{t("form.nextStepsNote")}</p>
+
+      <AnimatePresence>
+        {submitError ? (
+          <motion.p
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="mt-3 rounded-xl border border-rose-200 bg-rose-50 px-4 py-2.5 text-sm text-rose-600"
+            role="alert"
+          >
+            {t("form.submitError")}
+          </motion.p>
+        ) : null}
+      </AnimatePresence>
 
       <Button
         type="submit"
