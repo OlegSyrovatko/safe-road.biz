@@ -314,7 +314,7 @@
       "submit": "Send request",
       "submitting": "Sending...",
       "requiredMark": "required field",
-      "nextStepsNote": "After you submit, we'll send an invoice for payment and account setup instructions to the email you provided.",
+      "nextStepsNote": "After you submit, we'll send an invoice for payment and account setup instructions to the email you provided. Need the invoice in a different currency than shown here? Just mention it in your message.",
       "submitError": "Couldn't send the request. Check your connection and try again."
     },
     "validation": {
@@ -324,7 +324,7 @@
     },
     "success": {
       "title": "Thank you! We've received your request.",
-      "description": "We'll send an invoice for payment and account setup instructions to the email you provided.",
+      "description": "We'll send an invoice for payment and account setup instructions to the email you provided. Need a different currency? Just let us know and we'll reissue it.",
       "backHome": "Back to home"
     }
   },
