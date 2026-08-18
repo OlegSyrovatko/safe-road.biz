@@ -43,4 +43,5 @@ echo "==> Cleaning up local artifacts"
 rm -rf .deploy .deploy.tar.gz
 
 echo "==> Done. Verifying:"
+sleep 3
 curl -s -o /dev/null -w "HTTP: %{http_code}\n" "$SITE_URL/uk"
