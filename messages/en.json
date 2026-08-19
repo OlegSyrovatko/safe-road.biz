@@ -234,7 +234,7 @@
         ]
       },
       "basic": {
-        "name": "Safe Road Basic Monthly",
+        "name": "Safe Road Basic",
         "tagline": "For a small fleet",
         "devices": "4–10 devices",
         "description": "A starting plan for small teams beginning with navigation and trip analytics.",
@@ -248,7 +248,7 @@
         ]
       },
       "plus": {
-        "name": "Safe Road Plus Monthly",
+        "name": "Safe Road Plus",
         "tagline": "For an active fleet",
         "devices": "11–50 devices",
         "description": "The optimal plan for mid-sized fleets that need full analytics.",
@@ -261,7 +261,7 @@
         ]
       },
       "pro": {
-        "name": "Safe Road Pro Monthly",
+        "name": "Safe Road Pro",
         "tagline": "For large fleets",
         "devices": "50+ devices",
         "description": "A solution for large companies and carriers with a large-scale fleet.",
