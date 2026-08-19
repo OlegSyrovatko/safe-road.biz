@@ -14,6 +14,14 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import { paidPlans } from "@/data/pricing";
+import { amountUsdForCycle } from "@/lib/pricing/billingCycle";
+
+const PLAN_DISPLAY_NAME: Record<"basic" | "plus" | "pro", string> = {
+  basic: "Basic",
+  plus: "Plus",
+  pro: "Pro",
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -59,11 +67,28 @@ export default async function HomePage({
       applicationCategory: "NavigationApplication",
       operatingSystem: "iOS, Android",
       url: siteUrl,
-      offers: [
-        { "@type": "Offer", name: "Safe Road Basic Monthly", price: "4.99", priceCurrency: "USD" },
-        { "@type": "Offer", name: "Safe Road Plus Monthly", price: "29.99", priceCurrency: "USD" },
-        { "@type": "Offer", name: "Safe Road Pro Monthly", price: "99.99", priceCurrency: "USD" },
-      ],
+      // Both cadences are always listed (never just "Monthly") — this is
+      // static metadata for crawlers, not tied to a visitor's live
+      // billing-cycle toggle, so it must describe the whole catalog
+      // up front rather than only whatever cadence happened to be
+      // selected at render time.
+      offers: paidPlans.flatMap((plan) => {
+        const displayName = PLAN_DISPLAY_NAME[plan.id as "basic" | "plus" | "pro"];
+        return [
+          {
+            "@type": "Offer",
+            name: `Safe Road ${displayName} Monthly`,
+            price: plan.priceUsd.toFixed(2),
+            priceCurrency: "USD",
+          },
+          {
+            "@type": "Offer",
+            name: `Safe Road ${displayName} Yearly`,
+            price: amountUsdForCycle(plan.priceUsd, "annual").toFixed(2),
+            priceCurrency: "USD",
+          },
+        ];
+      }),
     },
   ];
 
