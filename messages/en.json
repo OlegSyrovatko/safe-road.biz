@@ -536,126 +536,183 @@
       "eyebrow": "Legal information",
       "title": "Public Offer Agreement",
       "updated": "Updated August 20, 2026",
-      "intro": "This document is a public offer by FOP Syrovatko Oleg Oleksandrovych to enter into an agreement for access to the Safe Road for Business service on the terms set out below.",
+      "intro": "This document is a public offer by sole proprietor Oleg Syrovatko to enter into an agreement for access to the Safe Road for Business service on the terms set out below.",
       "sections": [
         {
           "heading": "1. Definitions",
           "paragraphs": ["Terms used in this Offer have the following meaning:"],
           "list": [
-            "Provider — FOP Syrovatko Oleg Oleksandrovych (Ukrainian tax ID 3046902290)",
-            "Client — a legal entity, sole proprietor, or individual who has accepted this Offer",
-            "Service — the Safe Road for Business software (mobile app and backend) for vehicle fleet tracking, trip analytics, road quality rating, and alerts",
-            "Offer — this document, published at https://safe-road.biz/en/offer",
-            "Plan — the service tier selected by the Client (Basic/Plus/Pro), defining device limits, data retention period, and price",
-            "Activation Code — a unique code emailed to the Client after payment, used to activate the subscription in the app"
+            "Provider — sole proprietor Oleg Syrovatko, Ukrainian tax ID 3046902290",
+            "Client — a legal entity or sole proprietor that has submitted an order and accepted this Offer in accordance with its terms",
+            "Service — the Safe Road for Business software, including the mobile app, backend, and related functionality for vehicle tracking, trip analytics, road quality rating, and alerts",
+            "Offer — this agreement, published on the website at https://safe-road.biz/en/offer",
+            "Plan — the service package selected by the Client, defining, among other things, available features, device limits, data retention period, subscription term, and price",
+            "Subscription — the time-limited right to use the Service's features under the terms of a paid Plan",
+            "Activation Code — a unique code provided to the Client after payment is confirmed, used to activate the selected Plan in the Safe Road mobile app"
           ]
         },
         {
           "heading": "2. Subject of the agreement",
           "paragraphs": [
-            "The Provider grants the Client the right to use the Service under the selected Plan, and the Client agrees to pay for the service according to the issued invoice."
+            "The Provider grants the Client the right to use the Service under the selected Plan for the paid period, and the Client agrees to pay for that access on the terms of this Offer and the issued invoice.",
+            "The specific scope of the Service's features, the number of available devices, the data retention period, the price, and the subscription term are determined by the selected Plan and stated on the website or in the relevant invoice."
           ]
         },
         {
-          "heading": "3. Formation of the agreement (acceptance)",
+          "heading": "3. Formation of the agreement and acceptance of the Offer",
           "paragraphs": [
-            "This Offer is a public proposal by the Provider to enter into an agreement on the terms set out below. The Offer is deemed accepted when the Client either submits an order through the form at safe-road.biz, or pays an invoice issued by the Provider.",
-            "The agreement is considered concluded from the moment either of these actions is taken, and remains in effect until the parties have fulfilled their obligations."
+            "This Offer is a proposal by the Provider to enter into an agreement on the terms set out in this document.",
+            "The Client may submit an order for the Service through the order form on the Safe Road for Business website. Submitting an order does not, by itself, form an agreement and does not create any obligation for the Client to make a payment.",
+            "After receiving the order, the Provider may request any additional details needed from the Client and will send an invoice to the contact details the Client provided.",
+            "This Offer is accepted when the Client pays, in full, an invoice issued by the Provider under this Offer.",
+            "The agreement is considered concluded once the payment stated on the invoice is received, and the Client thereby confirms that it reviewed and agreed to the terms of this Offer before making the payment.",
+            "The agreement remains in effect for the paid period of use of the Service and until the parties have fulfilled their obligations."
           ]
         },
         {
           "heading": "4. Plans and service scope",
           "paragraphs": [
-            "The current list of Plans, the number of devices that can be connected, and pricing are published at https://safe-road.biz/en#pricing.",
-            "The Provider may change the list and pricing of Plans for future periods; such changes do not affect an already-paid period."
+            "The current list of Plans, their features, the number of devices that can be connected, the data retention period, the subscription term, and pricing are published at https://safe-road.biz/en#pricing.",
+            "The Provider may change the list, features, and pricing of Plans for future periods of use.",
+            "Such changes do not affect the terms of a period the Client has already paid for, unless this Offer expressly provides otherwise or the parties agree otherwise separately.",
+            "If the information on the website differs from the terms of a specific issued invoice as to price, device count, or service period, the terms of the issued invoice apply to that order."
           ]
         },
         {
           "heading": "5. Pricing and payment",
           "paragraphs": [
-            "Payment is made on the basis of an invoice the Provider emails to the Client after an order is submitted. Payment is by bank transfer, in Ukrainian hryvnia (for Ukrainian residents) or US dollars (for non-residents), to the account details stated on the invoice.",
-            "The invoice is due within the period stated on it (typically 5 calendar days from the issue date). The Provider's services are not subject to VAT, as the Provider operates under Ukraine's simplified taxation system (Group III single tax)."
+            "Payment is made on the basis of an invoice the Provider sends to the Client after receiving and processing the order.",
+            "Payment is by bank transfer: in Ukrainian hryvnia for Ukrainian residents; in another currency agreed by the parties and stated on the invoice for non-residents.",
+            "The invoice is due within the period stated on it. Unless the invoice states otherwise, that period is 5 calendar days from the date of issue.",
+            "Until payment is received, the Provider is not obligated to hold a Plan, its price, or any other commercial terms for the Client, unless the invoice expressly states otherwise.",
+            "The Provider operates under Ukraine's simplified taxation system as a Group III single tax payer. The Provider is not a VAT payer.",
+            "A document confirming receipt of payment is provided in accordance with the payment method used and applicable law."
           ]
         },
         {
           "heading": "6. Subscription term and renewal",
           "paragraphs": [
-            "A subscription is valid for the paid period (monthly or annual, depending on the payment chosen). Payments are not collected automatically and subscriptions do not auto-renew: to continue using the Service after the paid period ends, the Client must pay a new invoice.",
-            "Paying for an annual period gives the Client a discount equal to 2 months of service."
+            "A Subscription is valid for the paid period — one month or one year, depending on the selected Plan and payment option.",
+            "The Subscription's start date is the activation date, unless the invoice or a notice from the Provider states otherwise.",
+            "Payments are not collected automatically, and Subscriptions do not auto-renew.",
+            "To keep using the Service after the paid period ends, the Client must arrange a renewal and pay a new invoice.",
+            "Paying for an annual period gives the Client a discount equal to two months of service compared with paying for the same Plan monthly."
           ]
         },
         {
-          "heading": "7. Activation and use of the service",
+          "heading": "7. Activation and use of the Service",
           "paragraphs": [
-            "Once payment is received, the Provider emails the Client an activation code. The Client enters the activation code in the Safe Road mobile app to activate the selected Plan.",
-            "The number of devices that may be connected at once, and how long historical data is retained, are determined by the selected Plan."
+            "Once payment is confirmed, the Provider sends the Client an Activation Code or other instructions needed to access the selected Plan.",
+            "The Client activates the Subscription in the Safe Road mobile app following the instructions provided.",
+            "The number of devices that may be connected to the Subscription at once, the data retention period, and the available features are determined by the selected Plan.",
+            "The Client is responsible for keeping its Activation Code secure and must not share it with third parties without the Provider's agreement.",
+            "If an Activation Code is lost or compromised, the Client must notify the Provider using the contact details in this Offer."
           ]
         },
         {
-          "heading": "8. Provider's rights and obligations",
+          "heading": "8. Provider's obligations",
           "paragraphs": ["The Provider agrees to:"],
           "list": [
-            "keep the Service operating in line with the selected Plan's stated features",
-            "send invoices and activation codes to the Client's stated email address",
-            "give the Client reasonable notice of changes to service terms"
+            "provide access to the Service in line with the terms of the paid Plan",
+            "keep the Service operating within its technical capabilities",
+            "provide the Client the information needed to activate the Subscription",
+            "send invoices and other notices to the contact details the Client provided",
+            "give the Client notice of material changes to service terms that may affect future periods of use"
           ]
         },
         {
-          "heading": "9. Client's rights and obligations",
+          "heading": "9. Provider's rights",
+          "paragraphs": ["The Provider may:"],
+          "list": [
+            "carry out maintenance, updates, and upgrades to the Service",
+            "temporarily restrict access to the Service while necessary maintenance is carried out",
+            "change the Service's features to develop and improve it, provided the core paid features are preserved for the relevant period",
+            "suspend access if the Client breaches this Offer or applicable law"
+          ]
+        },
+        {
+          "heading": "10. Client's obligations",
           "paragraphs": ["The Client agrees to:"],
           "list": [
             "pay invoices on time to keep using the Service without interruption",
-            "provide accurate information when placing an order and issuing an invoice",
-            "use the Service for its intended purpose and in accordance with the laws of Ukraine"
+            "provide accurate, up-to-date information needed to issue an invoice and for communication",
+            "ensure the Service and any data sent to it are used lawfully",
+            "use the Service for its intended purpose and in accordance with this Offer and applicable law",
+            "not share access to the Subscription or an Activation Code with third parties in a way that conflicts with the terms of the selected Plan"
           ]
         },
         {
-          "heading": "10. Privacy and data protection",
+          "heading": "11. Privacy and data protection",
           "paragraphs": [
-            "Processing of the Client's personal data and data collected by the Service is governed by the Privacy Policy at https://safe-road.biz/privacy."
+            "The Client is solely responsible for having a proper legal basis to use any data on employees, drivers, other users, or third parties that the Client causes to be sent to the Service.",
+            "Personal data processing is carried out in accordance with Ukrainian law and the Privacy Policy at https://safe-road.biz/privacy.",
+            "The Client confirms it has a proper legal basis for any data on employees, drivers, or other individuals that it sends, or arranges to be sent, to the Service.",
+            "The Client agrees to properly inform such individuals and, where required by law, to obtain the necessary consents or otherwise ensure a lawful basis for processing their personal data."
           ]
         },
         {
-          "heading": "11. Limitation of liability",
+          "heading": "12. Limitation of liability",
           "paragraphs": [
-            "The Service provides vehicle location, road quality, and trip analytics information based on data collected in real time, without a guarantee of complete accuracy.",
-            "The Provider is not liable for losses arising from decisions the Client makes based on this data, nor for temporary unavailability of the Service due to causes beyond the Provider's control."
+            "The Service provides location, trip, road condition, road quality, and other data based on information from mobile devices, satellite systems, communication networks, and other technical sources.",
+            "The Provider does not guarantee that this data is completely accurate, continuous, or error-free, since its accuracy can be affected by device characteristics, GPS signal quality, network availability, operating system settings, weather, and other factors.",
+            "Information provided by the Service is informational and analytical in nature and must not be the sole basis for decisions affecting the safety of life, health, or property.",
+            "The Provider is not liable for direct or indirect losses resulting from decisions made by the Client or third parties based solely on Service data, except where such liability cannot be limited under Ukrainian law.",
+            "The Provider is also not liable for temporary unavailability or malfunction of the Service caused by circumstances beyond the Provider's control, including power, communications, or internet outages, or issues with GPS, mobile devices, or third-party services."
           ]
         },
         {
-          "heading": "12. Force majeure",
+          "heading": "13. Force majeure",
           "paragraphs": [
-            "Neither party is liable for partial or complete failure to perform its obligations under this agreement if that failure results from circumstances of insurmountable force, including hostilities, acts of public authorities, or loss of power or communications, as confirmed by the relevant certificate of the Ukrainian Chamber of Commerce and Industry."
+            "Neither party is liable for partial or complete failure to perform its obligations under this agreement if that failure is a direct result of circumstances of insurmountable force.",
+            "Such circumstances may include, among others, hostilities, acts of terrorism, acts of public authorities, states of emergency, large-scale power or communications outages, and other circumstances beyond a party's reasonable control.",
+            "The party affected by such circumstances must notify the other party within a reasonable time after doing so becomes possible.",
+            "The existence of force majeure circumstances may be evidenced by documents and other appropriate evidence in accordance with Ukrainian law."
           ]
         },
         {
-          "heading": "13. Termination",
+          "heading": "14. Termination",
           "paragraphs": [
-            "The Client may stop using the Service at any time by notifying the Provider; amounts already paid for the current period are non-refundable unless the parties agree otherwise.",
-            "If an invoice is not paid, access to the Service is suspended once the paid period ends."
+            "The Client may stop using the Service at any time.",
+            "Unless required otherwise by Ukrainian law or a separate written agreement of the parties, stopping use of the Service before the paid period ends does not entitle the Client to an automatic refund for the unused portion of the Subscription.",
+            "If an invoice for the next period is not paid, access to the Service ends once the last paid period is over.",
+            "The Provider may suspend or terminate access to the Service early in the event of a material breach of this Offer or applicable law by the Client."
           ]
         },
         {
-          "heading": "14. Governing law and disputes",
+          "heading": "15. Electronic communication",
           "paragraphs": [
-            "This agreement is governed by the laws of Ukraine. Disputes are resolved through negotiation, and failing that, in the courts of Ukraine at the Provider's place of registration."
+            "The parties agree that email and other electronic means of communication may be used to perform this agreement.",
+            "Notices, invoices, instructions, Activation Codes, and other information may be sent to the email address the Client provided when placing the order or in later communication.",
+            "The Client is responsible for keeping its contact details up to date."
           ]
         },
         {
-          "heading": "15. Changes to this Offer",
+          "heading": "16. Governing law and disputes",
           "paragraphs": [
-            "The Provider may amend this Offer at its own discretion. Changes take effect once the updated version is published on the website and do not apply retroactively to an already-paid period."
+            "This agreement is governed by the laws of Ukraine.",
+            "The parties will seek to resolve any disputes and disagreements through negotiation.",
+            "If no agreement is reached, the dispute is resolved by a competent court under the jurisdiction rules established by Ukrainian law."
           ]
         },
         {
-          "heading": "16. Provider's details",
+          "heading": "17. Changes to this Offer",
           "paragraphs": [
-            "FOP Syrovatko Oleg Oleksandrovych",
-            "66 Yuvileina Street, Nosivka, Chernihiv Oblast, 17100, Ukraine",
+            "The Provider may amend this Offer.",
+            "A new version of the Offer takes effect once published on the website, unless a different effective date is stated in that version.",
+            "Changes do not apply to an already-paid period of use of the Service where they would worsen the material terms of the paid Plan, except where a change is required to comply with the law or to keep the Service secure or stable.",
+            "The current version of this Offer is always available at https://safe-road.biz/en/offer."
+          ]
+        },
+        {
+          "heading": "18. Provider's details",
+          "paragraphs": [
+            "Sole proprietor Oleg Syrovatko",
+            "Address: 66 Yuvileina Street, Nosivka, Chernihiv Oblast, 17100, Ukraine",
             "Ukrainian tax ID: 3046902290",
-            "Group III single tax payer, VAT-exempt",
-            "Bank details for payment are stated on the invoice.",
-            "Contact: sirovatkooleg@gmail.com, +380 93 594 19 84"
+            "Tax regime: Group III single tax, VAT-exempt",
+            "Bank details for payment are stated on the relevant invoice.",
+            "Contact email: sirovatkooleg@gmail.com",
+            "Phone: +380 93 594 19 84"
           ]
         }
       ]
