@@ -289,6 +289,7 @@
     "legalTitle": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
+    "offer": "Public Offer",
     "copyright": "Safe Road © {year}. All rights reserved.",
     "appStore": "App Store",
     "googlePlay": "Google Play"
@@ -527,6 +528,134 @@
           "heading": "Contact",
           "paragraphs": [
             "For questions about these Terms, email sirovatkooleg@gmail.com or call +380 93 594 19 84."
+          ]
+        }
+      ]
+    },
+    "offer": {
+      "eyebrow": "Legal information",
+      "title": "Public Offer Agreement",
+      "updated": "Updated August 20, 2026",
+      "intro": "This document is a public offer by FOP Syrovatko Oleg Oleksandrovych to enter into an agreement for access to the Safe Road for Business service on the terms set out below.",
+      "sections": [
+        {
+          "heading": "1. Definitions",
+          "paragraphs": ["Terms used in this Offer have the following meaning:"],
+          "list": [
+            "Provider — FOP Syrovatko Oleg Oleksandrovych (Ukrainian tax ID 3046902290)",
+            "Client — a legal entity, sole proprietor, or individual who has accepted this Offer",
+            "Service — the Safe Road for Business software (mobile app and backend) for vehicle fleet tracking, trip analytics, road quality rating, and alerts",
+            "Offer — this document, published at https://safe-road.biz/en/offer",
+            "Plan — the service tier selected by the Client (Basic/Plus/Pro), defining device limits, data retention period, and price",
+            "Activation Code — a unique code emailed to the Client after payment, used to activate the subscription in the app"
+          ]
+        },
+        {
+          "heading": "2. Subject of the agreement",
+          "paragraphs": [
+            "The Provider grants the Client the right to use the Service under the selected Plan, and the Client agrees to pay for the service according to the issued invoice."
+          ]
+        },
+        {
+          "heading": "3. Formation of the agreement (acceptance)",
+          "paragraphs": [
+            "This Offer is a public proposal by the Provider to enter into an agreement on the terms set out below. The Offer is deemed accepted when the Client either submits an order through the form at safe-road.biz, or pays an invoice issued by the Provider.",
+            "The agreement is considered concluded from the moment either of these actions is taken, and remains in effect until the parties have fulfilled their obligations."
+          ]
+        },
+        {
+          "heading": "4. Plans and service scope",
+          "paragraphs": [
+            "The current list of Plans, the number of devices that can be connected, and pricing are published at https://safe-road.biz/en#pricing.",
+            "The Provider may change the list and pricing of Plans for future periods; such changes do not affect an already-paid period."
+          ]
+        },
+        {
+          "heading": "5. Pricing and payment",
+          "paragraphs": [
+            "Payment is made on the basis of an invoice the Provider emails to the Client after an order is submitted. Payment is by bank transfer, in Ukrainian hryvnia (for Ukrainian residents) or US dollars (for non-residents), to the account details stated on the invoice.",
+            "The invoice is due within the period stated on it (typically 5 calendar days from the issue date). The Provider's services are not subject to VAT, as the Provider operates under Ukraine's simplified taxation system (Group III single tax)."
+          ]
+        },
+        {
+          "heading": "6. Subscription term and renewal",
+          "paragraphs": [
+            "A subscription is valid for the paid period (monthly or annual, depending on the payment chosen). Payments are not collected automatically and subscriptions do not auto-renew: to continue using the Service after the paid period ends, the Client must pay a new invoice.",
+            "Paying for an annual period gives the Client a discount equal to 2 months of service."
+          ]
+        },
+        {
+          "heading": "7. Activation and use of the service",
+          "paragraphs": [
+            "Once payment is received, the Provider emails the Client an activation code. The Client enters the activation code in the Safe Road mobile app to activate the selected Plan.",
+            "The number of devices that may be connected at once, and how long historical data is retained, are determined by the selected Plan."
+          ]
+        },
+        {
+          "heading": "8. Provider's rights and obligations",
+          "paragraphs": ["The Provider agrees to:"],
+          "list": [
+            "keep the Service operating in line with the selected Plan's stated features",
+            "send invoices and activation codes to the Client's stated email address",
+            "give the Client reasonable notice of changes to service terms"
+          ]
+        },
+        {
+          "heading": "9. Client's rights and obligations",
+          "paragraphs": ["The Client agrees to:"],
+          "list": [
+            "pay invoices on time to keep using the Service without interruption",
+            "provide accurate information when placing an order and issuing an invoice",
+            "use the Service for its intended purpose and in accordance with the laws of Ukraine"
+          ]
+        },
+        {
+          "heading": "10. Privacy and data protection",
+          "paragraphs": [
+            "Processing of the Client's personal data and data collected by the Service is governed by the Privacy Policy at https://safe-road.biz/privacy."
+          ]
+        },
+        {
+          "heading": "11. Limitation of liability",
+          "paragraphs": [
+            "The Service provides vehicle location, road quality, and trip analytics information based on data collected in real time, without a guarantee of complete accuracy.",
+            "The Provider is not liable for losses arising from decisions the Client makes based on this data, nor for temporary unavailability of the Service due to causes beyond the Provider's control."
+          ]
+        },
+        {
+          "heading": "12. Force majeure",
+          "paragraphs": [
+            "Neither party is liable for partial or complete failure to perform its obligations under this agreement if that failure results from circumstances of insurmountable force, including hostilities, acts of public authorities, or loss of power or communications, as confirmed by the relevant certificate of the Ukrainian Chamber of Commerce and Industry."
+          ]
+        },
+        {
+          "heading": "13. Termination",
+          "paragraphs": [
+            "The Client may stop using the Service at any time by notifying the Provider; amounts already paid for the current period are non-refundable unless the parties agree otherwise.",
+            "If an invoice is not paid, access to the Service is suspended once the paid period ends."
+          ]
+        },
+        {
+          "heading": "14. Governing law and disputes",
+          "paragraphs": [
+            "This agreement is governed by the laws of Ukraine. Disputes are resolved through negotiation, and failing that, in the courts of Ukraine at the Provider's place of registration."
+          ]
+        },
+        {
+          "heading": "15. Changes to this Offer",
+          "paragraphs": [
+            "The Provider may amend this Offer at its own discretion. Changes take effect once the updated version is published on the website and do not apply retroactively to an already-paid period."
+          ]
+        },
+        {
+          "heading": "16. Provider's details",
+          "paragraphs": [
+            "FOP Syrovatko Oleg Oleksandrovych",
+            "66 Yuvileina Street, Nosivka, Chernihiv Oblast, 17100, Ukraine",
+            "Ukrainian tax ID: 3046902290",
+            "Group III single tax payer, VAT-exempt",
+            "Bank details for payment are stated on the invoice.",
+            "Contact: sirovatkooleg@gmail.com, +380 93 594 19 84"
           ]
         }
       ]
