@@ -225,6 +225,9 @@ export function OrderForm({ planId }: { planId: PlanId }) {
       </p>
 
       <p className="mt-3 text-xs leading-relaxed text-ink-400">{t("form.nextStepsNote")}</p>
+      <p className="mt-1 text-xs leading-relaxed text-ink-400">
+        {displayCurrency === "UAH" ? t("form.currencyNoteUah") : t("form.currencyNoteUsd")}
+      </p>
 
       <AnimatePresence>
         {submitError ? (
