@@ -240,6 +240,7 @@
         "description": "A starting plan for small teams beginning with navigation and trip analytics.",
         "features": [
           "Navigation for every driver",
+          "Unlimited map usage",
           "Road quality rating",
           "Trip history",
           "Basic route analytics",
