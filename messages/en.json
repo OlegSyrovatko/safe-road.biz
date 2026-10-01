@@ -423,7 +423,7 @@
             "device identifier",
             "general road surface condition data"
           ],
-          "note": "Data is transmitted over HTTPS and stored on a secure server. We do not share it with third parties, except where required by law or necessary for map service functionality. The full in-app Privacy Policy is available directly inside Safe Road."
+          "note": "Data is transmitted over HTTPS and stored on a secure server. We do not share it with third parties, except where required by law or necessary for map service functionality. Users can delete their trip history at any time using the \"Clear history\" button in the app's Analytics screen. The full in-app Privacy Policy is available directly inside Safe Road."
         },
         {
           "heading": "Security",
