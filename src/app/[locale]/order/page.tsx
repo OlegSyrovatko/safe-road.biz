@@ -7,6 +7,7 @@ import { SelectedPlanSummary } from "@/components/order/SelectedPlanSummary";
 import { pricingPlans, isPlanId } from "@/data/pricing";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -21,21 +22,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta.order" });
 
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/order",
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: `/${locale}/order`,
-      languages: { uk: "/uk/order", en: "/en/order" },
-    },
-    robots: { index: true, follow: true },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: `/${locale}/order`,
-      type: "website",
-    },
-  };
+    ogAlt: t("ogAlt"),
+  });
 }
 
 export default async function OrderPage({

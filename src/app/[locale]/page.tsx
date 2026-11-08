@@ -16,6 +16,7 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { paidPlans } from "@/data/pricing";
 import { amountUsdForCycle } from "@/lib/pricing/billingCycle";
+import { appStoreUrl, googlePlayUrl } from "@/data/stores";
 
 const PLAN_DISPLAY_NAME: Record<"basic" | "plus" | "pro", string> = {
   basic: "Basic",
@@ -46,12 +47,22 @@ export default async function HomePage({
       taxID: "3046902290",
       url: siteUrl,
       logo: `${siteUrl}/images/brand/logo-512.png`,
+      telephone: "+380935941984",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Носівка",
         addressRegion: "Чернігівська область",
         addressCountry: "UA",
       },
+      sameAs: [
+        appStoreUrl,
+        googlePlayUrl,
+        "https://www.facebook.com/oleg.sirovatko/?locale=uk_UA",
+        "https://www.instagram.com/sirovatkooleg/",
+        "https://www.threads.com/@sirovatkooleg",
+        "https://www.tiktok.com/@safe.road3",
+        "https://www.youtube.com/@safeworldroad",
+      ],
     },
     {
       "@context": "https://schema.org",

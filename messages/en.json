@@ -290,6 +290,7 @@
     "legalTitle": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
+    "appTerms": "App Terms of Use",
     "offer": "Public Offer",
     "copyright": "Safe Road © {year}. All rights reserved.",
     "appStore": "App Store",
@@ -467,7 +468,7 @@
           "heading": "About the service",
           "paragraphs": [
             "safe-road.biz is a presentation resource for the Safe Road for Business app. It lets you learn about the product's capabilities and pricing, and submit a connection request, including the free option for up to 3 devices.",
-            "These Terms cover the use of the website and the request process. Use of the Safe Road mobile app itself is governed by the App Store and Google Play terms, and by a separate in-app Privacy Policy."
+            "These Terms cover the use of the website and the request process. Use of the Safe Road mobile app itself is governed by the separate App Terms of Use, the App Store and Google Play terms, and the app's Privacy Policy."
           ]
         },
         {
@@ -526,6 +527,120 @@
         {
           "heading": "Governing law",
           "paragraphs": ["These Terms are governed by the laws of Ukraine."]
+        },
+        {
+          "heading": "Contact",
+          "paragraphs": [
+            "For questions about these Terms, email sirovatkooleg@gmail.com or call +380 93 594 19 84."
+          ]
+        }
+      ]
+    },
+    "appTerms": {
+      "eyebrow": "Legal",
+      "title": "Safe Road App Terms of Use",
+      "updated": "Updated November 8, 2026",
+      "intro": "These Terms govern the use of the Safe Road mobile app for Android and iOS, including its paid subscriptions. The app is provided by FOP Syrovatko Oleh Oleksandrovych (EDRPOU 3046902290).",
+      "sections": [
+        {
+          "heading": "Acceptance of terms",
+          "paragraphs": [
+            "By installing or using the Safe Road app, you agree to these Terms. If you do not agree with any part of them, please do not use the app."
+          ]
+        },
+        {
+          "heading": "About the app",
+          "paragraphs": [
+            "Safe Road is a driver's assistant. Among other things, the app:"
+          ],
+          "list": [
+            "builds routes and shows your movement on the map, including a navigation mode without GPS",
+            "estimates road quality from the phone's sensors during a trip",
+            "notifies you about air raid alerts and about approaching places you have chosen",
+            "keeps your trip history and shows analytics for your device and connected devices",
+            "sends notifications to Telegram if you have connected this feature"
+          ]
+        },
+        {
+          "heading": "Safety while driving",
+          "paragraphs": [
+            "The app only assists the driver and does not replace attention, traffic rules, road signs or police instructions. The driver is always responsible for operating the vehicle.",
+            "Do not hold or operate your phone while driving: set up the route before the trip or while stopped, and keep the phone in a holder.",
+            "Routes, road quality estimates, air raid alerts and the map position without GPS may be inaccurate or delayed — they depend on the GPS signal, mobile network, the phone's sensors and third-party sources."
+          ]
+        },
+        {
+          "heading": "Free access and subscriptions",
+          "paragraphs": [
+            "The core features of the app are available for free, with the limits shown in the app. The free version may show ads.",
+            "Extended features are available with a paid subscription. The plans, their features and prices are shown in the app; the exact amount in your currency is shown on the Google Play or App Store payment screen."
+          ],
+          "list": [
+            "Payment is processed and charged by Google Play or the App Store to your store account. We do not receive or store your card details.",
+            "The subscription renews automatically for each next period unless you cancel it at least 24 hours before the end of the current period.",
+            "You can cancel at any time in your Google Play or App Store subscription settings; access remains until the end of the period already paid for.",
+            "Upgrading to a more expensive plan takes effect immediately; Google Play prorates the cost for the rest of the current period. Downgrading takes effect from the next renewal.",
+            "Refunds are handled under the Google Play or App Store rules. If a payment is refunded, access to paid features for that period ends.",
+            "Limits for precise routes and address searches are granted gradually: during the first 2 days of each paid month, 20% of the monthly limit is available, and the rest after that.",
+            "The subscription applies to the device it was purchased on. After reinstalling the app or changing phones, use the \"Restore purchases\" button with the same store account."
+          ]
+        },
+        {
+          "heading": "Data and privacy",
+          "paragraphs": [
+            "During trips the app uses location and the phone's sensors, including in the background if you have allowed it. Anonymized road condition data helps improve the road quality map for all users.",
+            "What data we process and how to delete it is described in the Privacy Policy, available in the app and at safe-road.biz."
+          ]
+        },
+        {
+          "heading": "Rules of use",
+          "paragraphs": [
+            "By using the app, you agree not to:"
+          ],
+          "list": [
+            "violate applicable law",
+            "fake your location or other data to distort the road quality map or bypass plan limits",
+            "attempt unauthorized access to the app, our servers or other users' data",
+            "decompile, modify or resell the app or its data",
+            "send automated requests to our servers outside the app"
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "paragraphs": [
+            "The app, its design, texts, logo and road quality map belong to FOP Syrovatko Oleh Oleksandrovych and are protected by copyright law. We grant you a personal, non-exclusive right to use the app in accordance with these Terms."
+          ]
+        },
+        {
+          "heading": "Third-party services",
+          "paragraphs": [
+            "The app relies on third-party services: maps, air raid alert data sources, Google Play, the App Store, Telegram and ad networks. We do not control how they work or their policies and are not responsible for them."
+          ]
+        },
+        {
+          "heading": "Limitation of liability",
+          "paragraphs": [
+            "The app is provided \"as is\". We strive to keep it reliable and accurate, but do not guarantee that it is free of errors or interruptions, or that its data is fully accurate.",
+            "To the extent permitted by law, we are not liable for traffic accidents, fines, losses or decisions made based on data from the app."
+          ]
+        },
+        {
+          "heading": "Restricting access",
+          "paragraphs": [
+            "We may restrict access to the app or some of its features if these Terms are violated. You can stop using the app at any time and delete your trip history in its settings; in that case, cancel any paid subscription separately in the store."
+          ]
+        },
+        {
+          "heading": "Changes to these Terms",
+          "paragraphs": [
+            "We may update these Terms. The date of the last update is shown at the top of this page. By continuing to use the app after changes, you agree to the updated version."
+          ]
+        },
+        {
+          "heading": "Governing law",
+          "paragraphs": [
+            "These Terms are governed by the laws of Ukraine."
+          ]
         },
         {
           "heading": "Contact",

@@ -1,6 +1,7 @@
 import { PolicyPage } from "@/components/legal/PolicyPage";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -15,21 +16,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "legal.privacy" });
 
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "/privacy",
     title: t("title"),
     description: t("intro"),
-    alternates: {
-      canonical: `/${locale}/privacy`,
-      languages: { uk: "/uk/privacy", en: "/en/privacy" },
-    },
-    robots: { index: true, follow: true },
-    openGraph: {
-      title: t("title"),
-      description: t("intro"),
-      url: `/${locale}/privacy`,
-      type: "website",
-    },
-  };
+  });
 }
 
 export default async function PrivacyPage({

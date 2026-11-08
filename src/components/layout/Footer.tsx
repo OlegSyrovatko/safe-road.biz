@@ -120,6 +120,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/app-terms" className="text-sm hover:text-white">
+                  {t("appTerms")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/offer" className="text-sm hover:text-white">
                   {t("offer")}
                 </Link>
